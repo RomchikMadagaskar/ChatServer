@@ -13,7 +13,6 @@ public class Client implements Runnable{
     public Client(Socket socket, ChatServer server){
         this.socket=socket;
         this.server=server;
-///gfhfgh
         new Thread(this).start();
     }
 
@@ -33,6 +32,7 @@ public class Client implements Runnable{
                 server.sendAll(input );
                 input=in.nextLine();
             }
+
             socket.close();
         }catch (IOException e){
             e.printStackTrace();
